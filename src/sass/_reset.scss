@@ -1,0 +1,109 @@
+//===================================================================
+// Author: Philip Young
+// Email: hello@philipyoungg.com
+// Website: http://www.philipyoungg.com
+// Convention: BEM
+//===================================================================
+//
+//
+//
+//===================================================================
+// IMPORT
+//===================================================================
+@import 'genTachyons';
+//===================================================================
+// ABSOLUTE CENTER
+//===================================================================
+@include genTachyons2param( 'absolute-vertical-center', 'top', '50%', 'transform', 'translateY(-50%)');
+@include genTachyons2param( 'absolute-horizontal-center', 'left', '50%', 'transform', 'translateX(-50%)');
+@include genTachyons3param( 'absolute-center', 'left', '50%', 'top', '50%', 'transform', 'translate(-50%, -50%)');
+//===================================================================
+// WIDTH
+//===================================================================
+@include genTachyons( 'w-33', 'width', 100 / 3 * 100%);
+@include genTachyons( 'w-67', 'width', 100 * 2 / 3 * 100%);
+//===================================================================
+// FONT SIZE
+//===================================================================
+@include genTachyons( 'f-headline', 'font-size', 1rem * 1.3 * 1.3 * 1.3 * 1.3 * 1.3 * 1.3);
+@include genTachyons( 'f-subheadline', 'font-size', 1rem * 1.3 * 1.3 * 1.3 * 1.3 * 1.3);
+@include genTachyons( 'f1', 'font-size', 1rem * 1.3 * 1.3 * 1.3 * 1.3);
+@include genTachyons( 'f2', 'font-size', 1rem * 1.3 * 1.3 * 1.3);
+@include genTachyons( 'f3', 'font-size', 1rem * 1.3 * 1.3);
+@include genTachyons( 'f4', 'font-size', 1rem * 1.3);
+@include genTachyons( 'f5', 'font-size', 1rem);
+@include genTachyons( 'f6', 'font-size', 1rem / 1.3);
+@include genTachyons( 'f7', 'font-size', 1rem / 1.3 / 1.3);
+@include genTachyons( 'f8', 'font-size', 1rem / 1.3 / 1.3 / 1.3);
+@include genTachyons( 'f9', 'font-size', 1rem / 1.3 / 1.3 / 1.3 / 1.3);
+@include genTachyons( 'mh-500', 'min-height', '500px');
+//===================================================================
+// RESET
+//===================================================================
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 21px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0 0 1.5em; // mb 1 rem;
+  line-height: 1.15;
+}
+
+li,
+p {
+  line-height: 1.5;
+}
+
+li {
+  margin-bottom: 0;
+}
+
+a {
+  color: inherit;
+}
+
+ul {
+  padding-left: 0;
+}
+
+button,
+input,
+label,
+textarea {
+  font-size: 1rem;
+}
+
+button,
+input:not[type='checkbox'],
+input:not[type='radio'],
+textarea {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0;
+  -webkit-appearance: none;
+  box-shadow: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+::placeholder {
+  color: rgb(120, 120, 120);
+}

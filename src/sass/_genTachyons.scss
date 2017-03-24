@@ -1,0 +1,72 @@
+@mixin genTachyons($classname, $properties, $value) {
+  .#{$classname} {
+    #{$properties}: #{$value};
+  };
+  @media screen and (min-width: $bpsmall) {
+    .#{$classname}-ns {
+      #{$properties}: #{$value} !important;
+    };
+  }
+  @media screen and (min-width: $bpsmall) and (max-width: $bplarge) {
+    .#{$classname}-m {
+      #{$properties}: #{$value} !important;
+    };
+  }
+  @media screen and (min-width: $bplarge) {
+    .#{$classname}-l {
+      #{$properties}: #{$value} !important;
+    };
+  }
+}
+@mixin genTachyons2param($classname, $properties, $value, $properties2, $value2) {
+  .#{$classname} {
+    #{$properties}: #{$value};
+    #{$properties2}: #{$value2};
+  };
+  @media screen and (min-width: $bpsmall) {
+    .#{$classname}-ns {
+      #{$properties}: #{$value};
+      #{$properties2}: #{$value2};
+    };
+  }
+  @media screen and (min-width: $bpsmall) and (max-width: $bplarge) {
+    .#{$classname}-m {
+      #{$properties}: #{$value};
+      #{$properties2}: #{$value2};
+    };
+  }
+  @media screen and (min-width: $bplarge) {
+    .#{$classname}-l {
+      #{$properties}: #{$value};
+      #{$properties2}: #{$value2};
+    };
+  }
+}
+@mixin genTachyons3param($classname, $properties, $value, $properties2, $value2, $properties3, $value3) {
+  .#{$classname} {
+    #{$properties}: #{$value};
+    #{$properties2}: #{$value2};
+    #{$properties3}: #{$value3};
+  };
+  @media screen and (min-width: $bpsmall) {
+    .#{$classname}-ns {
+      #{$properties}: #{$value};
+      #{$properties2}: #{$value2};
+      #{$properties3}: #{$value3};
+    };
+  }
+  @media screen and (min-width: $bpsmall) and (max-width: $bplarge) {
+    .#{$classname}-m {
+      #{$properties}: #{$value};
+      #{$properties2}: #{$value2};
+      #{$properties3}: #{$value3};
+    };
+  }
+  @media screen and (min-width: $bplarge) {
+    .#{$classname}-l {
+      #{$properties}: #{$value};
+      #{$properties2}: #{$value2};
+      #{$properties3}: #{$value3};
+    };
+  }
+}

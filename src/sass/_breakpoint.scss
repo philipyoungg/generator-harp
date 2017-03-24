@@ -1,0 +1,34 @@
+//===================================================================
+// Author: Philip Young
+// Email: hello@philipyoungg.com
+// Website: http://www.philipyoungg.com
+// Convention: BEM
+//===================================================================
+//
+//
+//
+//===================================================================
+// BREAKPOINT
+//===================================================================
+@mixin bp($point) {
+   @if $point==ns{
+    @media (min-width: 60em) {
+       @content;
+    }
+  }
+  @if $point==m {
+     @media (min-width: 30em and max-width: 60em){
+      @content;
+    }
+  }
+  @if $point==l {
+     @media (min-width: 90em){
+      @content;
+    }
+  }
+  @else {
+     @media (max-width: $point){
+      @content;
+    }
+  }
+}
