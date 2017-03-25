@@ -1,7 +1,9 @@
 doctype
 html
   head
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tachyons/4.6.2/tachyons.min.css')
     link(rel="stylesheet" href="/main.css")
-    script(src='/bundle.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
   body
     != yield
+    script(src='/bundle.js')

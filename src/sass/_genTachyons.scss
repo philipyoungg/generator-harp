@@ -8,6 +8,8 @@
 //
 //
 //===================================================================
+$bpsmall: 30em;
+$bplarge: 60em;
 @mixin genTachyons($classname, $properties, $value) {
   .#{$classname} {
     #{$properties}: #{$value};
