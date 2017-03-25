@@ -12,22 +12,22 @@
 //===================================================================
 @mixin bp($point) {
    @if $point==ns{
-    @media (min-width: 60em) {
+    @media screen and (min-width: 60em) {
        @content;
     }
   }
   @if $point==m {
-     @media (min-width: 30em and max-width: 60em){
+     @media screen and (min-width: 30em) and (max-width: 60em){
       @content;
     }
   }
   @if $point==l {
-     @media (min-width: 90em){
+     @media screen and (min-width: 90em){
       @content;
     }
   }
   @else {
-     @media (max-width: $point){
+     @media screen and (max-width: $point){
       @content;
     }
   }

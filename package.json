@@ -6,21 +6,21 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "css:watch": "node-sass -w src/sass/* style.css",
-    "js:watch": "rollup -w -f iife src/script/index.js -o bundle.js",
+    "js:watch": "rollup -w -f iife --input src/script/index.js -o bundle.js",
     "dev:watch": "npm run css:watch & npm run js:watch",
-
     "prebuild:js": "rollup -f iife src/index.js -o bundleProxy.js",
     "build:js": "babel --presets es2015 bundleProxy.js > bundle.js",
     "postbuild:js": "rm bundleProxy.js",
     "prebuild:css": "node-sass src/sass/index.scss > style.css",
     "build:css": "postcss -u autoprefixer --no-map style.css -o style.css",
     "build": "npm run build:css & npm run build:js",
-
     "start": "harp server & browser-sync start --proxy 'localhost:9000' --files index.html style.css bundle.js & npm run dev:watch",
-
     "publish": "rm -rf www && harp compile && cd www && surge"
   },
   "keywords": [],
   "author": "Philip Young Gunawan <hello@philipyoungg.com> (http://www.philipyoungg.com)",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "rollup-watch": "^3.2.2"
+  }
 }

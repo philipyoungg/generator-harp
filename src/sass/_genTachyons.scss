@@ -1,3 +1,13 @@
+//===================================================================
+// Author: Philip Young
+// Email: hello@philipyoungg.com
+// Website: http://www.philipyoungg.com
+// Convention: BEM
+//===================================================================
+//
+//
+//
+//===================================================================
 @mixin genTachyons($classname, $properties, $value) {
   .#{$classname} {
     #{$properties}: #{$value};
